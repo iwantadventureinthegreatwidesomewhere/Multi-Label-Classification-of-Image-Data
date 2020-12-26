@@ -1,21 +1,3 @@
-# MINI-PROJECT 3
-### David Castonguay (260804528), Marco Guida (260803123), Mathew Marques (260804167)
-#### COMP 551 - Mini-Project #3
+# Multi-label Classification of Image Data
 
-## IMPORTANT:
-Before running all of the cells, please make sure to leave "extra" to False as it loads the extra MNIST dataset for a larger training dataset.
-Also leave all "dont_run" to True as those will force to not run all the hyper parameter search cells.
-
-Please also make sure that the "MNIST_synthetic.h5" is located in the same folder as the ".ipynb" file.
-
-Please make sure all the following libraries are installed:
-
-- pandas (0.25.1)
-- numpy (1.16.5)
-- opencv-python (cv2 for short) (4.4.0.44)
-- matplotlib (3.2.2)
-- scikit-learn (0.21.3)
-- h5py (2.10.0)
-- pytorch (1.7.1)
-- torchvision (0.8.2)
-- sklearn (0.23.2)
+We implemented a convolutional neural network (CNN) that identifies up to 5 digits in an image from a modified MNIST dataset. First, an algorithm was created that seperates all of the digits in an image. Then, a CNN model was trained with the images of the isolated digits. The model consisted of 4 convolutions layers, each with a ReLU and max pool layer, that then gets flattened to 3 linear layers, finally reducing to a softmax output of 10 classes. Our model resulted in a test accuracy of 99.523% on over 14,000 images in a Kaggle competition.
